@@ -13,10 +13,10 @@ class WORDJOURNEY_API AWJCaseManager : public AActor
 
 public:
 	AWJCaseManager();
-
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Case")
 	FWJCaseData CurrentCase;
-
+	
 	UPROPERTY(BlueprintReadOnly, Category="Case")
 	EWJCasePhase Phase = EWJCasePhase::Dialogue;
 

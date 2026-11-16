@@ -31,8 +31,7 @@ bool AWJCaseManager::AdvanceDialogue(FText& OutLine)
 
 bool AWJCaseManager::AskNPC(
 	FName QuestionID,
-	FText& OutAnswer
-)
+	FText& OutAnswer)
 {
 	OutAnswer = FText::GetEmpty();
 
@@ -58,8 +57,7 @@ void AWJCaseManager::MarkEvidenceViewed()
 
 bool AWJCaseManager::SubmitDecision(
 	FName DecisionID,
-	FWJDecisionData& OutDecision
-)
+	FWJDecisionData& OutDecision)
 {
 	for (const FWJDecisionData& Decision : CurrentCase.Decisions)
 	{
