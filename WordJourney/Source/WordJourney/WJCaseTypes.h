@@ -74,6 +74,12 @@ struct FWJCaseData
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FText EvidenceDetails;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText RulebookTitle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText RulebookDetails;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FWJDecisionData> Decisions;
