@@ -13,6 +13,25 @@ enum class EWJCasePhase : uint8
 	Feedback
 };
 
+UENUM(BlueprintType)
+enum class EWJDialogueSpeaker : uint8
+{
+	NPC UMETA(DisplayName = "NPC"),
+	Player UMETA(DisplayName = "Player")
+};
+
+USTRUCT(BlueprintType)
+struct FWJDialogueLine
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EWJDialogueSpeaker Speaker = EWJDialogueSpeaker::NPC;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText LineText;
+};
+
 USTRUCT(BlueprintType)
 struct FWJQuestionData
 {
@@ -47,6 +66,9 @@ struct FWJDecisionData
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FText FeedbackExplanation;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText NPCResponse;
 };
 
 USTRUCT(BlueprintType)
@@ -86,4 +108,7 @@ struct FWJCaseData
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FText LearningTarget;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FWJDialogueLine> OpeningDialogue;
 };

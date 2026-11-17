@@ -52,7 +52,6 @@ bool AWJCaseManager::AskNPC(
 void AWJCaseManager::MarkEvidenceViewed()
 {
 	bViewedEvidence = true;
-	Phase = EWJCasePhase::Investigation;
 }
 
 bool AWJCaseManager::SubmitDecision(
@@ -65,7 +64,6 @@ bool AWJCaseManager::SubmitDecision(
 		{
 			SelectedDecisionID = DecisionID;
 			OutDecision = Decision;
-			Phase = EWJCasePhase::Feedback;
 			return true;
 		}
 	}
