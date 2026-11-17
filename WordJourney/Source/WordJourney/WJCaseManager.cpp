@@ -77,3 +77,8 @@ void AWJCaseManager::ResetCase()
 {
 	StartCase();
 }
+
+void AWJCaseManager::SetCasePhase(EWJCasePhase NewPhase)
+{
+	Phase = NewPhase;
+}

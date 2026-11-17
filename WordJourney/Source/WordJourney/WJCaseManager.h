@@ -52,4 +52,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category="Case")
 	void ResetCase();
+	
+	UFUNCTION(BlueprintCallable, Category = "Case")
+	void SetCasePhase(EWJCasePhase NewPhase);
 };
