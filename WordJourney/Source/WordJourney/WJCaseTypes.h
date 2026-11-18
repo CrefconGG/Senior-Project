@@ -72,6 +72,21 @@ struct FWJDecisionData
 };
 
 USTRUCT(BlueprintType)
+struct FWJCaseStage
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WordJourney")
+	TArray<FWJDialogueLine> DialogueLines;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WordJourney")
+	int32 FirstDecisionIndex = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WordJourney")
+	int32 DecisionCount = 3;
+};
+
+USTRUCT(BlueprintType)
 struct FWJCaseData
 {
 	GENERATED_BODY()
@@ -111,4 +126,7 @@ struct FWJCaseData
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FWJDialogueLine> OpeningDialogue;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WordJourney")
+	TArray<FWJCaseStage> Stages;
 };
